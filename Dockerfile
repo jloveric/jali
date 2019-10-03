@@ -14,7 +14,10 @@ RUN apt-get update && apt-get install -y \
   git
 
 RUN apt-get update && apt-get install -y liblapack-dev libblas-dev libhdf5-mpich-dev
+RUN apt-get update && apt-get install -y libptscotch-dev
 RUN apt-get update && apt-get install -y trilinos-all-dev
+RUN apt-get update && apt-get install -y libnetcdf-dev
+RUN apt-get update && apt-get install -y libexodusii-dev
 
 WORKDIR app
 COPY . .
@@ -24,6 +27,4 @@ COPY examples examples
 COPY tools tools
 
 RUN ./install.sh
-RUN rm -rf CMakeCache.txt && cmake .
-RUN make
 RUN /bin/sh
