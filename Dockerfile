@@ -18,6 +18,8 @@ RUN apt-get update && apt-get install -y libptscotch-dev
 RUN apt-get update && apt-get install -y trilinos-all-dev
 RUN apt-get update && apt-get install -y libnetcdf-dev
 RUN apt-get update && apt-get install -y libexodusii-dev
+RUN apt-get update && apt-get install -y libunittest++
+RUN apt-get update && apt-get install -y doxygen
 
 WORKDIR app
 COPY . .
