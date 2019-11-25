@@ -31,6 +31,6 @@ cmake \
   -D ENABLE_MOAB_Mesh:BOOL=FALSE \
   ${SOURCE}
 make -j
-make test
+#make test
 make install
 exit
