@@ -4,7 +4,8 @@
 export SOURCE=`pwd`
 export TPL_INSTALL_PREFIX=$SOURCE/inst-tpl
 export JALI_INSTALL_PREFIX=$SOURCE/inst-jali
-mkdir build-tpl
+
+[ ! -d "$SOURCE/build-tpl" ] && mkdir build-tpl
 cd build-tpl
 cmake \
     -D CMAKE_C_COMPILER=`which mpicc` \
@@ -17,7 +18,7 @@ cmake \
 make -j
 make install
 cd ..
-mkdir build-jali
+[ ! -d "$SOURCE/build-jali" ] && mkdir build-jali
 cd build-jali
 cmake \
   -C $TPL_INSTALL_PREFIX/share/cmake/Jali-tpl-config.cmake \
