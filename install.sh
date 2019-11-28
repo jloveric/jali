@@ -23,7 +23,7 @@ cd build-jali
 cmake \
   -C $TPL_INSTALL_PREFIX/share/cmake/Jali-tpl-config.cmake \
   -D CMAKE_BUILD_TYPE=Release \
-  -D CMAKE_CXX_FLAGS='-std=c++11' \
+  -D CMAKE_CXX_FLAGS='-std=c++2a' \
   -D CMAKE_INSTALL_PREFIX:FILEPATH=$JALI_INSTALL_PREFIX \
   -D HDF5_NO_SYSTEM_PATHS:BOOL=TRUE \
   -D BOOST_ROOT:FILEPATH=$TPL_INSTALL_PREFIX \
